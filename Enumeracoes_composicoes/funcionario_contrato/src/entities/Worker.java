@@ -1,6 +1,5 @@
 package entities;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,11 +71,10 @@ public class Worker {
 	}
 	
 	public double income(int year, int month) {
-		LocalDateTime time = LocalDateTime.now();
 		double sum = baseSalary; 
 		for(HourContract c : contracts) {
-			int c_year = time.getYear();
-			int c_month = time.getMonthValue();
+			int c_year = c.getDate().getYear();
+			int c_month = c.getDate().getMonthValue();
 			if(year == c_year && c_month == month ) { 
 				sum += c.totalValue();
 			}

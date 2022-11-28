@@ -1,27 +1,27 @@
 package entities;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class HourContract {
 	
-	private LocalDateTime date;
+	private LocalDate date;
 	private Double valuePerHour; 
 	private Integer hours; 
 	
 	public HourContract() {
 	}
 
-	public HourContract(LocalDateTime date, Double valuePerHour, Integer hours) {
+	public HourContract(LocalDate date, Double valuePerHour, Integer hours) {
 		this.date = date;
 		this.valuePerHour = valuePerHour;
 		this.hours = hours;
 	}
 
-	public LocalDateTime getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(LocalDateTime date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 
