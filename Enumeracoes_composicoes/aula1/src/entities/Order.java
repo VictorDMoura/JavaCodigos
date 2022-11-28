@@ -1,6 +1,7 @@
 package entities;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import entities.enums.OrderStatus;
 
@@ -14,7 +15,7 @@ public class Order {
 	}
 
 	public Order(Integer id, LocalDateTime moment, OrderStatus status) {
-		super();
+		
 		this.id = id;
 		this.moment = moment;
 		this.status = status;
@@ -46,7 +47,8 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Order [id=" + id + ", moment=" + moment + ", status=" + status + "]";
+		return "Order [id=" + id + ", moment=" + moment.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"))
+				+ ", status=" + status + "]";
 	}
 	
 	
