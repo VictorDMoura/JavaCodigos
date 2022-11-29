@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author victordmoura
+ *
+ */
+module posts {
+}
