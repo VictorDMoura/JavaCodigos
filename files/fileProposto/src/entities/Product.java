@@ -9,10 +9,10 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, Double price) {
+    public Product(String name, Double price, int quantity) {
         this.name = name;
         this.price = price;
-        this.quantity = 0;
+        this.quantity = quantity;
     }
 
     public String getName() {
